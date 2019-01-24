@@ -1,16 +1,12 @@
-//получаем абсолютный путь
 let path = require('path'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-//настройка в webpack
 let conf = {
-    //указываем webpack откуда брать начальный скрипт
     entry: './src/js/script.js',
-    //выходные данные
     output: {
         path: path.resolve(__dirname, './dist/js'),
         filename: 'app.js',
-        publicPath: '/dist/js'//localhost:8080 будет работать даже без папки dist + работает как liveReload
+        publicPath: '/dist/js'
     },
     devServer: {
         overlay: true
@@ -32,7 +28,6 @@ let conf = {
     plugins: [
         new ExtractTextPlugin('../css/style.css'),
     ]
-
 };
 
 module.exports = (env, options)=>{

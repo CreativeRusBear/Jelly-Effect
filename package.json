@@ -1,22 +1,14 @@
 {
-  "name": "work-with-webpack",
+  "name": "test",
   "version": "1.0.0",
-  "description": "First project on webpack",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CreativeRusBear/work-with-webpack.git"
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open"
   },
   "author": "CreativeRusBear",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CreativeRusBear/work-with-webpack/issues"
-  },
-  "homepage": "https://github.com/CreativeRusBear/work-with-webpack#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -25,10 +17,8 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "path": "^0.12.7",
-    "style-loader": "^0.20.3",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
-  },
-  "dependencies": {}
+  }
 }
