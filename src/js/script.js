@@ -52,3 +52,5 @@ function Render() {
 }
 
 Render();
+
+import '../css/style.css';
