@@ -1,12 +1,14 @@
 export default class Mouse {
-  constructor (canvas){
-      this.x=0;
-      this.y=0;
-      var rect = canvas.getBoundingClientRect();//возвращает размер элемента и его позицию относительно окна.
-      canvas.onmousemove=e=>{
-          this.x = e.clientX - rect.left;
-          this.y = e.clientY - rect.top;
-          //console.log(this.x, this.y);
-      }
-  }
+    constructor(canvas) {
+        this.x = 0;
+        this.y = 0;
+        this.rect = canvas.getBoundingClientRect();
+
+        canvas.addEventListener('mousemove', this.canvasMouseMoveHandler.bind(this));
+    }
+
+    canvasMouseMoveHandler(e){
+        this.x = e.clientX - this.rect.left;
+        this.y = e.clientY - this.rect.top;
+    }
 }
