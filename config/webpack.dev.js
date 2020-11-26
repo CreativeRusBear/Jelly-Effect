@@ -16,5 +16,10 @@ module.exports = merge(baseConfig, {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    performance: {
+        hints: 'warning',
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    }
 });
